@@ -1,0 +1,97 @@
+*
+
+{
+    margin: 0;
+    padding: 0;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif
+
+}
+body{
+    background: #0d0f1b;
+}
+.mainbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vh;
+    background: url(CVpic.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+ul
+{
+    position: absolute;
+    align-items: center ;
+    display: flex;
+    flex-direction: column;
+}
+ul li
+{
+    list-style: none;
+}
+ul li:before{
+content: attr(data-text);
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50% -50%);
+color: #fff;
+font-size: 6em;
+font-weight: 700;
+pointer-events: none;
+opacity: 0;
+letter-spacing: 20px;
+transition: 0.5s;
+white-space: nowrap;
+}
+ul li:hover:before:hover{
+    opacity: 1;
+    letter-spacing: 20px;
+}
+ul li a
+{
+position: relative;
+display: inline-block;
+padding: 6px 15px;
+text-decoration: none;
+background: #000000;
+color: #fff;
+text-transform: uppercase;
+letter-spacing: 2px;
+overflow: hidden;
+transition: 0.30s;
+z-index: 1;
+}
+ul:hover li a
+{
+opacity: 0.07;
+}
+
+ul li a:hover
+{
+    transform: scale(1.4);
+    z-index: 1000;
+    background:#b6b6b6(255, 68, 0);
+    opacity: 1;
+}
+ul li a:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 80px;
+    height: 100%;
+    background: linear-gradient(90deg,transparent, rgba(255,2555,255,0.8), transparent);
+    transform: skewX(35deg);
+    transition: 3s;
+}
+ul li a:hover:before
+{
+    left: calc(100% + 100px);
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
